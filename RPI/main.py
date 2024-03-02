@@ -3,12 +3,12 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.route('/control', methods=['POST'])
+@app.route('/connect', methods=['POST']) #POST method for confirm connection between RPi and app
 def control_car():
     command = request.form.get('command')
     print("Received command:", command)
 
-    return 'OK', 200
+    return 'Úspěšně navázáno spojení', 200 
 
 
 if __name__ == '__main__':
