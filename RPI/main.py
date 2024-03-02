@@ -3,7 +3,6 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-# Define a route to receive control commands
 @app.route('/control', methods=['POST'])
 def control_car():
     command = request.form.get('command')
